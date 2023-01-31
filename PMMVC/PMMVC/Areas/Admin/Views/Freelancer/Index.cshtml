@@ -1,0 +1,38 @@
+﻿@using PMMVC.Infrastructure.Data;
+@model IEnumerable<Freelancer>;
+
+@{
+    ViewData["Title"] = "Freelance";
+}
+
+<div class="row pb-3">
+    @foreach (var freelancer in Model)
+    {
+        <div class="col-lg-3 col-md-6">
+            <div class="row p-2">
+                <div class="col-12 p-1" style="border:1px solid #008cba; border-radius:5px;">
+                    <div class="card">
+                        <img src="~/img/Screenshot (217).png" class="card-img-top rounded" width="480" height="240" />
+
+                        <div class="card-body">
+                            <div class="pl-1">
+                                <p class="card-title h5 text-primary">Name: @freelancer.FirstName @freelancer.LastName</p>
+                            </div>
+                            <div class="pl-1">
+                                <p>Skill: @freelancer.Skill.Name</p>
+                            </div>
+                            <div class="pl-1">
+                                <p>Project: @freelancer.Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a asp-action="Details" class="btn btn-primary form-control" asp-route-productid="@freelancer.Id">
+                            Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
