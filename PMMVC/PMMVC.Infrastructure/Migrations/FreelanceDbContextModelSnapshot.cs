@@ -280,6 +280,9 @@ namespace PMMVC.Infrastructure.Migrations
                     b.Property<long>("GenderId")
                         .HasColumnType("bigint");
 
+                    b.Property<string>("Header")
+                        .HasColumnType("text");
+
                     b.Property<long?>("HubbyId")
                         .HasColumnType("bigint");
 
@@ -287,9 +290,6 @@ namespace PMMVC.Infrastructure.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("LastName")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Project")
                         .HasColumnType("text");
 
                     b.Property<long>("SkillId")
@@ -319,12 +319,12 @@ namespace PMMVC.Infrastructure.Migrations
                             City = "Abuja",
                             FirstName = "John",
                             GenderId = 1L,
+                            Header = "Machine Learning Engineer",
                             HubbyId = 2L,
                             LastName = "Doe",
-                            Project = "Retail Analytics",
                             SkillId = 1L,
-                            TimeCreated = new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2701), new TimeSpan(0, 0, 0, 0, 0)),
-                            TimeUpdated = new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2700), new TimeSpan(0, 0, 0, 0, 0))
+                            TimeCreated = new DateTimeOffset(new DateTime(2023, 2, 8, 13, 41, 45, 412, DateTimeKind.Unspecified).AddTicks(3504), new TimeSpan(0, 0, 0, 0, 0)),
+                            TimeUpdated = new DateTimeOffset(new DateTime(2023, 2, 8, 13, 41, 45, 412, DateTimeKind.Unspecified).AddTicks(3502), new TimeSpan(0, 0, 0, 0, 0))
                         },
                         new
                         {
@@ -335,10 +335,9 @@ namespace PMMVC.Infrastructure.Migrations
                             GenderId = 2L,
                             HubbyId = 1L,
                             LastName = "Doe",
-                            Project = "Ecommerce",
                             SkillId = 2L,
-                            TimeCreated = new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2708), new TimeSpan(0, 0, 0, 0, 0)),
-                            TimeUpdated = new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2707), new TimeSpan(0, 0, 0, 0, 0))
+                            TimeCreated = new DateTimeOffset(new DateTime(2023, 2, 8, 13, 41, 45, 412, DateTimeKind.Unspecified).AddTicks(3514), new TimeSpan(0, 0, 0, 0, 0)),
+                            TimeUpdated = new DateTimeOffset(new DateTime(2023, 2, 8, 13, 41, 45, 412, DateTimeKind.Unspecified).AddTicks(3513), new TimeSpan(0, 0, 0, 0, 0))
                         });
                 });
 
@@ -368,15 +367,15 @@ namespace PMMVC.Infrastructure.Migrations
                         {
                             Id = 1L,
                             Name = "Male",
-                            TimeCreated = new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2253), new TimeSpan(0, 0, 0, 0, 0)),
-                            TimeUpdated = new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2252), new TimeSpan(0, 0, 0, 0, 0))
+                            TimeCreated = new DateTimeOffset(new DateTime(2023, 2, 8, 13, 41, 45, 412, DateTimeKind.Unspecified).AddTicks(2707), new TimeSpan(0, 0, 0, 0, 0)),
+                            TimeUpdated = new DateTimeOffset(new DateTime(2023, 2, 8, 13, 41, 45, 412, DateTimeKind.Unspecified).AddTicks(2705), new TimeSpan(0, 0, 0, 0, 0))
                         },
                         new
                         {
                             Id = 2L,
                             Name = "Female",
-                            TimeCreated = new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2259), new TimeSpan(0, 0, 0, 0, 0)),
-                            TimeUpdated = new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2258), new TimeSpan(0, 0, 0, 0, 0))
+                            TimeCreated = new DateTimeOffset(new DateTime(2023, 2, 8, 13, 41, 45, 412, DateTimeKind.Unspecified).AddTicks(2716), new TimeSpan(0, 0, 0, 0, 0)),
+                            TimeUpdated = new DateTimeOffset(new DateTime(2023, 2, 8, 13, 41, 45, 412, DateTimeKind.Unspecified).AddTicks(2715), new TimeSpan(0, 0, 0, 0, 0))
                         });
                 });
 
@@ -406,15 +405,74 @@ namespace PMMVC.Infrastructure.Migrations
                         {
                             Id = 1L,
                             Name = "Music",
-                            TimeCreated = new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2611), new TimeSpan(0, 0, 0, 0, 0)),
-                            TimeUpdated = new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2610), new TimeSpan(0, 0, 0, 0, 0))
+                            TimeCreated = new DateTimeOffset(new DateTime(2023, 2, 8, 13, 41, 45, 412, DateTimeKind.Unspecified).AddTicks(3317), new TimeSpan(0, 0, 0, 0, 0)),
+                            TimeUpdated = new DateTimeOffset(new DateTime(2023, 2, 8, 13, 41, 45, 412, DateTimeKind.Unspecified).AddTicks(3316), new TimeSpan(0, 0, 0, 0, 0))
                         },
                         new
                         {
                             Id = 2L,
                             Name = "Games",
-                            TimeCreated = new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2616), new TimeSpan(0, 0, 0, 0, 0)),
-                            TimeUpdated = new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2615), new TimeSpan(0, 0, 0, 0, 0))
+                            TimeCreated = new DateTimeOffset(new DateTime(2023, 2, 8, 13, 41, 45, 412, DateTimeKind.Unspecified).AddTicks(3323), new TimeSpan(0, 0, 0, 0, 0)),
+                            TimeUpdated = new DateTimeOffset(new DateTime(2023, 2, 8, 13, 41, 45, 412, DateTimeKind.Unspecified).AddTicks(3322), new TimeSpan(0, 0, 0, 0, 0))
+                        });
+                });
+
+            modelBuilder.Entity("PMMVC.Infrastructure.Data.Project", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
+
+                    b.Property<string>("Documentation")
+                        .HasColumnType("text");
+
+                    b.Property<DateTimeOffset>("EndDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<long?>("FreelancerId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.Property<DateTimeOffset>("StartDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FreelancerId");
+
+                    b.ToTable("Projects");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1L,
+                            Documentation = "Retail analytics is the process of providing analytical data on inventory levels, supply chain movement, consumer demand, sales, etc. that are crucial for making marketing, and procurement decisions",
+                            EndDate = new DateTimeOffset(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            FreelancerId = 1L,
+                            Name = "Retail Analytics",
+                            StartDate = new DateTimeOffset(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 2L,
+                            Documentation = "Analytics of the sales of XYZ company",
+                            EndDate = new DateTimeOffset(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            FreelancerId = 1L,
+                            Name = "Data Analytics",
+                            StartDate = new DateTimeOffset(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 3L,
+                            Documentation = "E-commerce (electronic commerce) is the buying and selling of goods and services, or the transmitting of funds or data, over an electronic network, primarily the internet. These business transactions occur either as business-to-business (B2B), business-to-consumer (B2C), consumer-to-consumer or consumer-to-business.",
+                            EndDate = new DateTimeOffset(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            FreelancerId = 2L,
+                            Name = "Ecommerce",
+                            StartDate = new DateTimeOffset(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
                         });
                 });
 
@@ -444,15 +502,15 @@ namespace PMMVC.Infrastructure.Migrations
                         {
                             Id = 1L,
                             Name = "Machine Learning",
-                            TimeCreated = new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2653), new TimeSpan(0, 0, 0, 0, 0)),
-                            TimeUpdated = new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2652), new TimeSpan(0, 0, 0, 0, 0))
+                            TimeCreated = new DateTimeOffset(new DateTime(2023, 2, 8, 13, 41, 45, 412, DateTimeKind.Unspecified).AddTicks(3377), new TimeSpan(0, 0, 0, 0, 0)),
+                            TimeUpdated = new DateTimeOffset(new DateTime(2023, 2, 8, 13, 41, 45, 412, DateTimeKind.Unspecified).AddTicks(3375), new TimeSpan(0, 0, 0, 0, 0))
                         },
                         new
                         {
                             Id = 2L,
                             Name = "Software Engineer",
-                            TimeCreated = new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2658), new TimeSpan(0, 0, 0, 0, 0)),
-                            TimeUpdated = new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2658), new TimeSpan(0, 0, 0, 0, 0))
+                            TimeCreated = new DateTimeOffset(new DateTime(2023, 2, 8, 13, 41, 45, 412, DateTimeKind.Unspecified).AddTicks(3384), new TimeSpan(0, 0, 0, 0, 0)),
+                            TimeUpdated = new DateTimeOffset(new DateTime(2023, 2, 8, 13, 41, 45, 412, DateTimeKind.Unspecified).AddTicks(3383), new TimeSpan(0, 0, 0, 0, 0))
                         });
                 });
 
@@ -539,6 +597,20 @@ namespace PMMVC.Infrastructure.Migrations
                     b.Navigation("Hubby");
 
                     b.Navigation("Skill");
+                });
+
+            modelBuilder.Entity("PMMVC.Infrastructure.Data.Project", b =>
+                {
+                    b.HasOne("PMMVC.Infrastructure.Data.Freelancer", "Freelancer")
+                        .WithMany("Projects")
+                        .HasForeignKey("FreelancerId");
+
+                    b.Navigation("Freelancer");
+                });
+
+            modelBuilder.Entity("PMMVC.Infrastructure.Data.Freelancer", b =>
+                {
+                    b.Navigation("Projects");
                 });
 #pragma warning restore 612, 618
         }

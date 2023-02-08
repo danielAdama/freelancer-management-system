@@ -76,6 +76,29 @@ namespace PMMVC.Infrastructure.Services.Infracstructure.Persistence
                    TimeCreated = DateTimeOffset.UtcNow
                });
 
+            modelBuilder.Entity<Project>()
+                .HasData(
+                new Project
+                {
+                    Id = 1,
+                    Name = "Retail Analytics",
+                    Documentation = "Retail analytics is the process of providing analytical data on inventory levels, supply chain movement, consumer demand, sales, etc. that are crucial for making marketing, and procurement decisions",
+                    FreelancerId = 1
+                },
+                new Project
+                {
+                    Id = 2,
+                    Name = "Data Analytics",
+                    Documentation = "Analytics of the sales of XYZ company",
+                    FreelancerId = 1
+                },
+                new Project
+                {
+                    Id = 3,
+                    Name = "Ecommerce",
+                    Documentation = "E-commerce (electronic commerce) is the buying and selling of goods and services, or the transmitting of funds or data, over an electronic network, primarily the internet. These business transactions occur either as business-to-business (B2B), business-to-consumer (B2C), consumer-to-consumer or consumer-to-business.",
+                    FreelancerId = 2
+                });
             modelBuilder.Entity<Freelancer>()
                .HasData(
                new Freelancer
@@ -85,10 +108,10 @@ namespace PMMVC.Infrastructure.Services.Infracstructure.Persistence
                    LastName = "Doe",
                    Age = 25,
                    City = "Abuja",
+                   Header = "Machine Learning Engineer",
                    SkillId = 1,
                    HubbyId = 2,
                    GenderId = 1,
-                   Project = "Retail Analytics",
                    TimeUpdated = DateTimeOffset.UtcNow,
                    TimeCreated = DateTimeOffset.UtcNow
                },
@@ -102,7 +125,6 @@ namespace PMMVC.Infrastructure.Services.Infracstructure.Persistence
                    SkillId = 2,
                    HubbyId = 1,
                    GenderId = 2,
-                   Project = "Ecommerce",
                    TimeUpdated = DateTimeOffset.UtcNow,
                    TimeCreated = DateTimeOffset.UtcNow
                });

@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace PMMVC.Infrastructure.Migrations
 {
-    public partial class SeedInitailData : Migration
+    public partial class SeedInitialData : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -56,6 +56,21 @@ namespace PMMVC.Infrastructure.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_HubbyCategories", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Projects",
+                columns: table => new
+                {
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Name = table.Column<string>(type: "text", nullable: true),
+                    TimeCreated = table.Column<DateTimeOffset>(type: "timestamp with time zone", nullable: false),
+                    TimeUpdated = table.Column<DateTimeOffset>(type: "timestamp with time zone", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Projects", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -150,7 +165,7 @@ namespace PMMVC.Infrastructure.Migrations
                     SkillId = table.Column<long>(type: "bigint", nullable: false),
                     GenderId = table.Column<long>(type: "bigint", nullable: false),
                     HubbyId = table.Column<long>(type: "bigint", nullable: true),
-                    Project = table.Column<string>(type: "text", nullable: true),
+                    ProjectId = table.Column<long>(type: "bigint", nullable: true),
                     Biography = table.Column<string>(type: "text", nullable: true),
                     TimeCreated = table.Column<DateTimeOffset>(type: "timestamp with time zone", nullable: false),
                     TimeUpdated = table.Column<DateTimeOffset>(type: "timestamp with time zone", nullable: false)
@@ -168,6 +183,11 @@ namespace PMMVC.Infrastructure.Migrations
                         name: "FK_Freelancers_HubbyCategories_HubbyId",
                         column: x => x.HubbyId,
                         principalTable: "HubbyCategories",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Freelancers_Projects_ProjectId",
+                        column: x => x.ProjectId,
+                        principalTable: "Projects",
                         principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Freelancers_SkillCategories_SkillId",
@@ -267,8 +287,8 @@ namespace PMMVC.Infrastructure.Migrations
                 columns: new[] { "Id", "Name", "TimeCreated", "TimeUpdated" },
                 values: new object[,]
                 {
-                    { 1L, "Male", new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2253), new TimeSpan(0, 0, 0, 0, 0)), new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2252), new TimeSpan(0, 0, 0, 0, 0)) },
-                    { 2L, "Female", new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2259), new TimeSpan(0, 0, 0, 0, 0)), new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2258), new TimeSpan(0, 0, 0, 0, 0)) }
+                    { 1L, "Male", new DateTimeOffset(new DateTime(2023, 1, 31, 20, 6, 23, 459, DateTimeKind.Unspecified).AddTicks(6653), new TimeSpan(0, 0, 0, 0, 0)), new DateTimeOffset(new DateTime(2023, 1, 31, 20, 6, 23, 459, DateTimeKind.Unspecified).AddTicks(6650), new TimeSpan(0, 0, 0, 0, 0)) },
+                    { 2L, "Female", new DateTimeOffset(new DateTime(2023, 1, 31, 20, 6, 23, 459, DateTimeKind.Unspecified).AddTicks(6674), new TimeSpan(0, 0, 0, 0, 0)), new DateTimeOffset(new DateTime(2023, 1, 31, 20, 6, 23, 459, DateTimeKind.Unspecified).AddTicks(6673), new TimeSpan(0, 0, 0, 0, 0)) }
                 });
 
             migrationBuilder.InsertData(
@@ -276,8 +296,17 @@ namespace PMMVC.Infrastructure.Migrations
                 columns: new[] { "Id", "Name", "TimeCreated", "TimeUpdated" },
                 values: new object[,]
                 {
-                    { 1L, "Music", new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2611), new TimeSpan(0, 0, 0, 0, 0)), new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2610), new TimeSpan(0, 0, 0, 0, 0)) },
-                    { 2L, "Games", new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2616), new TimeSpan(0, 0, 0, 0, 0)), new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2615), new TimeSpan(0, 0, 0, 0, 0)) }
+                    { 1L, "Music", new DateTimeOffset(new DateTime(2023, 1, 31, 20, 6, 23, 459, DateTimeKind.Unspecified).AddTicks(7473), new TimeSpan(0, 0, 0, 0, 0)), new DateTimeOffset(new DateTime(2023, 1, 31, 20, 6, 23, 459, DateTimeKind.Unspecified).AddTicks(7472), new TimeSpan(0, 0, 0, 0, 0)) },
+                    { 2L, "Games", new DateTimeOffset(new DateTime(2023, 1, 31, 20, 6, 23, 459, DateTimeKind.Unspecified).AddTicks(7477), new TimeSpan(0, 0, 0, 0, 0)), new DateTimeOffset(new DateTime(2023, 1, 31, 20, 6, 23, 459, DateTimeKind.Unspecified).AddTicks(7477), new TimeSpan(0, 0, 0, 0, 0)) }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Projects",
+                columns: new[] { "Id", "Name", "TimeCreated", "TimeUpdated" },
+                values: new object[,]
+                {
+                    { 1L, "Retail Analytics", new DateTimeOffset(new DateTime(2023, 1, 31, 21, 6, 23, 459, DateTimeKind.Unspecified).AddTicks(7568), new TimeSpan(0, 1, 0, 0, 0)), new DateTimeOffset(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)) },
+                    { 2L, "Ecommerce", new DateTimeOffset(new DateTime(2023, 1, 31, 21, 6, 23, 459, DateTimeKind.Unspecified).AddTicks(7571), new TimeSpan(0, 1, 0, 0, 0)), new DateTimeOffset(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)) }
                 });
 
             migrationBuilder.InsertData(
@@ -285,17 +314,17 @@ namespace PMMVC.Infrastructure.Migrations
                 columns: new[] { "Id", "Name", "TimeCreated", "TimeUpdated" },
                 values: new object[,]
                 {
-                    { 1L, "Machine Learning", new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2653), new TimeSpan(0, 0, 0, 0, 0)), new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2652), new TimeSpan(0, 0, 0, 0, 0)) },
-                    { 2L, "Software Engineer", new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2658), new TimeSpan(0, 0, 0, 0, 0)), new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2658), new TimeSpan(0, 0, 0, 0, 0)) }
+                    { 1L, "Machine Learning", new DateTimeOffset(new DateTime(2023, 1, 31, 20, 6, 23, 459, DateTimeKind.Unspecified).AddTicks(7536), new TimeSpan(0, 0, 0, 0, 0)), new DateTimeOffset(new DateTime(2023, 1, 31, 20, 6, 23, 459, DateTimeKind.Unspecified).AddTicks(7535), new TimeSpan(0, 0, 0, 0, 0)) },
+                    { 2L, "Software Engineer", new DateTimeOffset(new DateTime(2023, 1, 31, 20, 6, 23, 459, DateTimeKind.Unspecified).AddTicks(7540), new TimeSpan(0, 0, 0, 0, 0)), new DateTimeOffset(new DateTime(2023, 1, 31, 20, 6, 23, 459, DateTimeKind.Unspecified).AddTicks(7539), new TimeSpan(0, 0, 0, 0, 0)) }
                 });
 
             migrationBuilder.InsertData(
                 table: "Freelancers",
-                columns: new[] { "Id", "Age", "Biography", "City", "FirstName", "GenderId", "HubbyId", "ImageUrl", "LastName", "Project", "SkillId", "TimeCreated", "TimeUpdated" },
+                columns: new[] { "Id", "Age", "Biography", "City", "FirstName", "GenderId", "HubbyId", "ImageUrl", "LastName", "ProjectId", "SkillId", "TimeCreated", "TimeUpdated" },
                 values: new object[,]
                 {
-                    { 1L, 25, null, "Abuja", "John", 1L, 2L, null, "Doe", "Retail Analytics", 1L, new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2701), new TimeSpan(0, 0, 0, 0, 0)), new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2700), new TimeSpan(0, 0, 0, 0, 0)) },
-                    { 2L, 22, null, "Lagos", "Jane", 2L, 1L, null, "Doe", "Ecommerce", 2L, new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2708), new TimeSpan(0, 0, 0, 0, 0)), new DateTimeOffset(new DateTime(2023, 1, 31, 16, 39, 56, 11, DateTimeKind.Unspecified).AddTicks(2707), new TimeSpan(0, 0, 0, 0, 0)) }
+                    { 1L, 25, null, "Abuja", "John", 1L, 2L, null, "Doe", 1L, 1L, new DateTimeOffset(new DateTime(2023, 1, 31, 20, 6, 23, 459, DateTimeKind.Unspecified).AddTicks(7746), new TimeSpan(0, 0, 0, 0, 0)), new DateTimeOffset(new DateTime(2023, 1, 31, 20, 6, 23, 459, DateTimeKind.Unspecified).AddTicks(7745), new TimeSpan(0, 0, 0, 0, 0)) },
+                    { 2L, 22, null, "Lagos", "Jane", 2L, 1L, null, "Doe", 2L, 2L, new DateTimeOffset(new DateTime(2023, 1, 31, 20, 6, 23, 459, DateTimeKind.Unspecified).AddTicks(7752), new TimeSpan(0, 0, 0, 0, 0)), new DateTimeOffset(new DateTime(2023, 1, 31, 20, 6, 23, 459, DateTimeKind.Unspecified).AddTicks(7751), new TimeSpan(0, 0, 0, 0, 0)) }
                 });
 
             migrationBuilder.CreateIndex(
@@ -351,6 +380,11 @@ namespace PMMVC.Infrastructure.Migrations
                 column: "HubbyId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Freelancers_ProjectId",
+                table: "Freelancers",
+                column: "ProjectId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Freelancers_SkillId",
                 table: "Freelancers",
                 column: "SkillId");
@@ -384,6 +418,9 @@ namespace PMMVC.Infrastructure.Migrations
 
             migrationBuilder.DropTable(
                 name: "HubbyCategories");
+
+            migrationBuilder.DropTable(
+                name: "Projects");
 
             migrationBuilder.DropTable(
                 name: "SkillCategories");

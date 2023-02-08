@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rS59k2n4n4ZRJhOtOy0AmxW3ccqci52XSSEwERuXQEfrGd5XXvwFkz4xeC6w0AaqpWhgQ0IBl8yq2MeTH7UbNQ==",
+  "dgSpecHash": "9KRBdUSxv62gr3Sdo5NSAwaZFLXLNryR6ZQQudS+K3fESd3DEt3+yrlo6lP+k14MMDETW7UWhr51hpZYfZcWGw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\Desktop\\programming\\softwareEng\\PMMVC\\PMMVC.Infrastructure\\PMMVC.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\Desktop\\programming\\softwareEng\\freelancer-management-system\\PMMVC\\PMMVC.Infrastructure\\PMMVC.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
