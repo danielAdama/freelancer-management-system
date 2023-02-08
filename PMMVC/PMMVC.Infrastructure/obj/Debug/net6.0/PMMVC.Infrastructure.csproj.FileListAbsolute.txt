@@ -12,3 +12,17 @@ C:\Users\DELL\Desktop\programming\softwareEng\PMMVC\PMMVC.Infrastructure\obj\Deb
 C:\Users\DELL\Desktop\programming\softwareEng\PMMVC\PMMVC.Infrastructure\obj\Debug\net6.0\PMMVC.Infrastructure.pdb
 C:\Users\DELL\Desktop\programming\softwareEng\PMMVC\PMMVC.Infrastructure\obj\Debug\net6.0\PMMVC.Infrastructure.genruntimeconfig.cache
 C:\Users\DELL\Desktop\programming\softwareEng\PMMVC\PMMVC.Infrastructure\obj\Debug\net6.0\ref\PMMVC.Infrastructure.dll
+C:\Users\DELL\Desktop\programming\softwareEng\freelancer-management-system\PMMVC\PMMVC.Infrastructure\bin\Debug\net6.0\PMMVC.Infrastructure.deps.json
+C:\Users\DELL\Desktop\programming\softwareEng\freelancer-management-system\PMMVC\PMMVC.Infrastructure\bin\Debug\net6.0\PMMVC.Infrastructure.runtimeconfig.json
+C:\Users\DELL\Desktop\programming\softwareEng\freelancer-management-system\PMMVC\PMMVC.Infrastructure\bin\Debug\net6.0\PMMVC.Infrastructure.dll
+C:\Users\DELL\Desktop\programming\softwareEng\freelancer-management-system\PMMVC\PMMVC.Infrastructure\bin\Debug\net6.0\PMMVC.Infrastructure.pdb
+C:\Users\DELL\Desktop\programming\softwareEng\freelancer-management-system\PMMVC\PMMVC.Infrastructure\obj\Debug\net6.0\PMMVC.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\DELL\Desktop\programming\softwareEng\freelancer-management-system\PMMVC\PMMVC.Infrastructure\obj\Debug\net6.0\PMMVC.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\Desktop\programming\softwareEng\freelancer-management-system\PMMVC\PMMVC.Infrastructure\obj\Debug\net6.0\PMMVC.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\DELL\Desktop\programming\softwareEng\freelancer-management-system\PMMVC\PMMVC.Infrastructure\obj\Debug\net6.0\PMMVC.Infrastructure.AssemblyInfo.cs
+C:\Users\DELL\Desktop\programming\softwareEng\freelancer-management-system\PMMVC\PMMVC.Infrastructure\obj\Debug\net6.0\PMMVC.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\programming\softwareEng\freelancer-management-system\PMMVC\PMMVC.Infrastructure\obj\Debug\net6.0\PMMVC.Infrastructure.dll
+C:\Users\DELL\Desktop\programming\softwareEng\freelancer-management-system\PMMVC\PMMVC.Infrastructure\obj\Debug\net6.0\refint\PMMVC.Infrastructure.dll
+C:\Users\DELL\Desktop\programming\softwareEng\freelancer-management-system\PMMVC\PMMVC.Infrastructure\obj\Debug\net6.0\PMMVC.Infrastructure.pdb
+C:\Users\DELL\Desktop\programming\softwareEng\freelancer-management-system\PMMVC\PMMVC.Infrastructure\obj\Debug\net6.0\PMMVC.Infrastructure.genruntimeconfig.cache
+C:\Users\DELL\Desktop\programming\softwareEng\freelancer-management-system\PMMVC\PMMVC.Infrastructure\obj\Debug\net6.0\ref\PMMVC.Infrastructure.dll

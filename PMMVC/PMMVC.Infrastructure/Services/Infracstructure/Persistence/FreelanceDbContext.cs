@@ -18,6 +18,7 @@ namespace PMMVC.Infrastructure.Services.Infracstructure.Persistence
         public DbSet<Freelancer> Freelancers { get; set; }
         public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<AppRole> AppRoles { get; set; }
+        public DbSet<Project> Projects { get; set; }
         public DbSet<GenderCategory> GenderCategories { get; set; }
         public DbSet<HubbyCategory> HubbyCategories { get; set; }
         public DbSet<SkillCategory> SkillCategories { get; set; }

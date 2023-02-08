@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "r9cLtXxQefVSu9Fe1qHggXliGuj/2/ZYW46u1cwuZrwnN68herPR0LFj+U67qG9NP19ovBtcYOgyVaYfjjrC0A==",
+  "dgSpecHash": "rkESN0LdMtclILNIO/7wTSg6nzKD3rCIGrNll2TwX5Ue5BiBhITeUE0tYMRG8GvbUeoGZEigOOBXsJBoWzM28Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\Desktop\\programming\\softwareEng\\PMMVC\\PMMVC\\PMMVC.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\Desktop\\programming\\softwareEng\\freelancer-management-system\\PMMVC\\PMMVC\\PMMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

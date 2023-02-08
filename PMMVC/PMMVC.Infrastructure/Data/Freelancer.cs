@@ -17,6 +17,7 @@ namespace PMMVC.Infrastructure.Data
         public string? ImageUrl { get; set; }
         public string? City { get; set; }
         public int Age { get; set; }
+        public string Header { get; set; }
         public long SkillId { get; set; }
         public SkillCategory Skill { get; set; }
         public long GenderId { get; set; }
@@ -24,7 +25,8 @@ namespace PMMVC.Infrastructure.Data
         public GenderCategory Gender { get; set; }
         public long? HubbyId { get; set; }
         public HubbyCategory Hubby { get; set; }
-        public string Project { get; set; }
+        // A freelancer will have multiple projects
+        public ICollection<Project> Projects { get; set; }
         public string? Biography { get; set; }
     }
 }

@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Areas\Account\Controllers\" />
-    <Folder Include="Areas\Account\Views\" />
     <Folder Include="wwwroot\img\" />
   </ItemGroup>
 
