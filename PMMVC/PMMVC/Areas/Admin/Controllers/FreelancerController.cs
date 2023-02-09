@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PMMVC.Infrastructure.Data;
+using PMMVC.Infrastructure.Data.ViewModels;
 using PMMVC.Infrastructure.Services.Infracstructure.Persistence;
 using System.Threading;
 
@@ -22,15 +23,25 @@ namespace PMMVC.Areas.Admin.Controllers
                 .AsNoTracking().ToListAsync(cancellationToken);
             return View(freelances);
         }
-        public async Task<IActionResult> Details(long id, CancellationToken cancellationToken)
+
+        public async Task<IActionResult> Details(long freelancerid)
         {
-            var freelancer = await _context.Freelancers.FirstOrDefaultAsync(x => x.Id.Equals(id), cancellationToken);
+            if (freelancerid is 0)
+            {
+                return NotFound();
+            }
+            Freelancer? freelancer = await _context.Freelancers.FindAsync(freelancerid);
+
+            if (freelancer == null)
+            {
+                return NotFound();
+            }
             return View(freelancer);
         }
 
         #region API CALLS
         [HttpGet]
-        public async Task<IActionResult> projects(long id, CancellationToken cancellationToken)
+        public async Task<IActionResult> project(long id, CancellationToken cancellationToken)
         {
             var freelancer = await _context.Freelancers.FirstOrDefaultAsync(x => x.Id.Equals(id), cancellationToken);
             if (freelancer is null)
@@ -40,7 +51,6 @@ namespace PMMVC.Areas.Admin.Controllers
             var projects = await _context.Projects.Where(x => x.FreelancerId.Equals(freelancer.Id))
                 .ToListAsync(cancellationToken);
             return Json(new { data = projects });
-
         }
         #endregion
     }

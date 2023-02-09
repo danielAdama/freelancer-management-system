@@ -25,7 +25,7 @@ namespace PMMVC.Infrastructure.Data
         public GenderCategory Gender { get; set; }
         public long? HubbyId { get; set; }
         public HubbyCategory Hubby { get; set; }
-        // A freelancer will have multiple projects
+        // A freelancer can have multiple or a project
         public ICollection<Project> Projects { get; set; }
         public string? Biography { get; set; }
     }
