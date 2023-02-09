@@ -1,12 +1,20 @@
-﻿alert("test");
+﻿
+async function loadDataTable(url) {
+    try {
+        const resp = await fetch(url);
+        const data = await resp.json();
+        $('#tblData').DataTable({
+            data: data.data,
+            columns: [
+                { data: "name", "width": "15%" },
+                { data: "documentation", "width": "15%" },
+                { data: "startDate", "width": "15%" },
+                { data: "endDate", "width": "15%" },
+            ],
+        });
+    } catch (error) {
+        console.error(error);
+    }
+};
 
-//async function loadData(url) {
-//    const resp = await fetch(url);
-//    const db_data = await resp.json();
-//    const dataTable = $('#tblData').DataTable({
-//        data: db_data.data,
-//        columns: [
-//            { data: "name", "width": "15%" },
-//            ]
-//        });
-//}
+loadDataTable(`https://localhost:44300/Admin/Freelancer/project/${freelancerId}`);

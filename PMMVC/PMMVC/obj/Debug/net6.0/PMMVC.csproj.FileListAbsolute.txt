@@ -526,3 +526,6 @@ C:\Users\DELL\Desktop\programming\softwareEng\freelancer-management-system\PMMVC
 C:\Users\DELL\Desktop\programming\softwareEng\freelancer-management-system\PMMVC\PMMVC\obj\Debug\net6.0\PMMVC.pdb
 C:\Users\DELL\Desktop\programming\softwareEng\freelancer-management-system\PMMVC\PMMVC\obj\Debug\net6.0\PMMVC.genruntimeconfig.cache
 C:\Users\DELL\Desktop\programming\softwareEng\freelancer-management-system\PMMVC\PMMVC\obj\Debug\net6.0\ref\PMMVC.dll
+C:\Users\DELL\Desktop\programming\softwareEng\freelancer-management-system\PMMVC\PMMVC\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\DELL\Desktop\programming\softwareEng\freelancer-management-system\PMMVC\PMMVC\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\DELL\Desktop\programming\softwareEng\freelancer-management-system\PMMVC\PMMVC\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

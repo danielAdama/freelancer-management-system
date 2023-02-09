@@ -1,4 +1,5 @@
-﻿
+﻿@model PMMVC.Infrastructure.Data.Freelancer;
+
 <div>
     <div class="card  container pt-4">
         <div class="card-header bg-primary text-light ml-0  row ">
@@ -19,7 +20,7 @@
                         </div>
                     </div>
                 <div>
-                    <h3>Header: Machine Learning Engineer</h3>
+                    <h3>Header: Machine Learning Engineer freelancer @Model.Id</h3>
                 </div>
                 <div>
                     <table id="tblData" class="table table-bordered table-striped" style="width:100%">
@@ -27,6 +28,8 @@
                             <tr>
                                 <th scope="col">Name</th>
                                 <th scope="col">Documentation</th>
+                                <th scope="col">Start Date</th>
+                                <th scope="col">End Date</th>
                                 @*<th scope="col">Progress Bar</th>
                                 <th></th>
                                 <th></th>*@
@@ -38,4 +41,10 @@
         </div>
     </div>
 </div>
-<script src="~/js/general.js"></script>
+
+@section Scripts{
+    <script>
+        var freelancerId = @Model.Id;
+    </script>
+    <script src="~/js/general.js"></script>
+}
