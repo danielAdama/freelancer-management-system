@@ -1,6 +1,10 @@
 ﻿@model PMMVC.Infrastructure.Data.Freelancer;
 
-<div>
+@{
+    ViewData["Title"] = "Details";
+}
+
+@*<div>
     <div class="card  container pt-4">
         <div class="card-header bg-primary text-light ml-0  row ">
             <div class="col-12 col-md-6">
@@ -26,6 +30,7 @@
                     <table id="tblData" class="table table-bordered table-striped" style="width:100%">
                         <thead class="thead-light">
                             <tr>
+                                <th scope="col">S/N</th>
                                 <th scope="col">Name</th>
                                 <th scope="col">Documentation</th>
                                 <th scope="col">Start Date</th>
@@ -33,12 +38,66 @@
                                 @*<th scope="col">Progress Bar</th>
                                 <th></th>
                                 <th></th>*@
-                            </tr>
+                            @*</tr>
                         </thead>
                     </table>
                 </div>
             </div>
         </div>
+    </div>
+</div>*@
+
+
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .left-section {
+        width: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .right-section {
+        width: 70%;
+        padding: 20px;
+    }
+
+    .table {
+        width: 100%;
+        margin-top: 20px;
+    }
+</style>
+<div>
+    <div class="container pt-4">
+        <div class="left-section">
+            <img src="~/img/Screenshot (217).png" width="145" height="217" style="border-radius:5px; border:1px solid #bbb9b9" />
+        </div>
+        <div class="right-section">
+            <!-- Your information goes here -->
+            <p>Header: @Model.Header</p>
+        </div>
+    </div>
+    <!-- Your table goes here -->
+    <div>
+        <table id="tblData" class="table table-bordered table-striped" style="width:110%">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">S/N</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Documentation</th>
+                    <th scope="col">Start Date</th>
+                    <th scope="col">End Date</th>
+                    @*<th scope="col">Progress Bar</th>*@
+                    @*<th></th>
+                    <th></th>*@
+                </tr>
+            </thead>
+        </table>
     </div>
 </div>
 

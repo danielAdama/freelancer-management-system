@@ -6,6 +6,7 @@ async function loadDataTable(url) {
         $('#tblData').DataTable({
             data: data.data,
             columns: [
+                { data: "id", "width": "15%" },
                 { data: "name", "width": "15%" },
                 { data: "documentation", "width": "15%" },
                 { data: "startDate", "width": "15%" },
